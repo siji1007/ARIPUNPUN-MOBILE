@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow: hidden; /* Disable scrolling */
+}
+
+body {
+    background-image: url('SOURCES/x.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2px); /* Adjust the blur intensity as needed */
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space evenly between children */
+    align-items: center; /* Center children horizontally */
+}
+
+section h1 {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 30%; /* Set height for the h1 element */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: white; /* Font color */
+    font-family: 'Nosifer', cursive; /* Use the Nosifer Caps font */
+    font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+section video {
+    width: 100%;
+    max-width: 800px; /* Adjust maximum width as needed */
+    object-fit: contain; /* Ensures the video fits within the container without stretching */
+}
+
+@media (max-width: 375px) {
+    section video {
+        width: 100%;
+        height: 200px; /* Adjusted height for mobile view */
+        object-fit: contain; /* Mobile view: Ensures the video fits within the container without stretching */
+    }
+}
+
+section .navigation {
+    display: flex;
+    justify-content: space-around; /* Spaced evenly on smaller screens */
+    align-items: center;
+    z-index: 100;
+    width: 100%; /* Ensure navigation takes full width */
+}
+
+section .navigation li {
+    list-style: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background: #fff;
+    padding: 5px; /* Increased padding for better touch experience */
+    opacity: 0.7;
+    transition: 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Border with reduced opacity */
+}
+
+section .navigation li:hover {
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.8); /* Adjusted border color on hover */
+}
+
+section .navigation li img {
+    width: 80px; /* Adjusted image size for smaller screens */
+    transition: 0.5s;
+}
+
+section .navigation li img:hover {
+    width: 120px; /* Increased image size on hover */
+}
+
+#videoContainer {
+    width: 100%; /* Full width */
+    max-width: 800px; /* Max width for larger screens */
+    height: auto; /* Auto height */
+    margin-bottom: 20px; /* Margin for spacing */
+    overflow: hidden; /* Hide overflow content */
+}
+
+#videoFrame {
+    width: 100%; /* Full width within the container */
+    height: 100%; /* Full height within the container */
+    border: none; /* Remove border */
+}
+
+@media (max-width: 375px) {
+    #videoContainer {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+}

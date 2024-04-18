@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <section>
+        <H1 id="imageTitle">TITLE HERE</H1>
+        <div id="videoContainer">
+            <!-- Embedded video player -->
+            <iframe id="videoFrame" width="640" height="480" allowfullscreen></iframe>
+        </div>
+
+        <ul class="navigation">
+            <li onclick="changeVideo('1BD8YIBve7Fuk2tbPPy_qKmUInLXQl2gs', 'Image 1')"><img src="SOURCES/MARIA.png" alt="Image 1" ></li>
+            <li onclick="changeVideo('1BD8YIBve7Fuk2tbPPy_qKmUInLXQl2gs', 'SILENCED VOICES')"><img src="SOURCES/MARIA.png" alt="Image 2"></li>
+            <li onclick="changeVideo('15iCnRwgs_Q-vcCZYoyV7l2eSGgHtL6-E', 'POLITICAL DYNASTY')"><img src="SOURCES/POLITICAL.png" alt="Image 3"></li>
+            <li onclick="changeVideo('1BD8YIBve7Fuk2tbPPy_qKmUInLXQl2gs', 'Image 4')"><img src="img-1.png" alt="Image 4"></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function changeVideo(fileId, title) {
+            const videoUrl = `https://drive.google.com/file/d/${fileId}/preview?`;
+            document.getElementById("videoFrame").src = videoUrl;
+            document.getElementById("imageTitle").innerText = title;
+        }
+    </script>
+    
+</body>
+</html>
